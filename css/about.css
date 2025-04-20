@@ -1,0 +1,459 @@
+/* About Page Styles */
+.about-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.about-hero-content {
+  max-width: 800px;
+  padding: 0 2rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.about-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Mission Section */
+.about-mission {
+  padding: 5rem 0;
+}
+
+.about-mission .container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.mission-content {
+  flex: 1;
+}
+
+.mission-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  position: relative;
+}
+
+.mission-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.mission-content p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.mission-image {
+  flex: 1;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.mission-image:hover img {
+  transform: scale(1.02);
+}
+
+/* Values Section */
+.about-values {
+  padding: 5rem 0;
+  background-color: var(--background-alt);
+}
+
+.about-values h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.about-values h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.values-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(255, 107, 53, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.value-icon i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.value-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: var(--text-light);
+}
+
+/* Journey Section */
+.about-journey {
+  padding: 5rem 0;
+}
+
+.about-journey .container {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.journey-image {
+  flex: 1;
+}
+
+.journey-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+.journey-content {
+  flex: 1;
+}
+
+.journey-content h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.journey-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-date {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  color: var(--text-light);
+}
+
+/* Team Section */
+.about-team {
+  padding: 5rem 0;
+  background-color: var(--background-alt);
+}
+
+.about-team h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.member-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.05);
+}
+
+.team-member h3 {
+  font-size: a1.3rem;
+  margin: 1.5rem 0 0.3rem;
+}
+
+.member-role {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.member-bio {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.member-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.member-social a {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.member-social a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 5rem 0;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-cta {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.btn-outline {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-outline:hover {
+  background-color: white;
+  color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about-mission .container,
+  .about-journey .container {
+    flex-direction: column;
+  }
+  
+  .about-mission .container {
+    flex-direction: column-reverse;
+  }
+  
+  .mission-content,
+  .journey-content,
+  .mission-image,
+  .journey-image {
+    width: 100%;
+  }
+  
+  .about-hero {
+    height: 50vh;
+  }
+  
+  .about-hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    height: 40vh;
+  }
+  
+  .about-hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn-cta,
+  .btn-outline {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    height: 30vh;
+  }
+  
+  .about-hero-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .about-mission,
+  .about-values,
+  .about-journey,
+  .about-team {
+    padding: 3rem 0;
+  }
+  
+  .mission-content h2,
+  .journey-content h2,
+  .about-values h2,
+  .about-team h2 {
+    font-size: 1.5rem;
+  }
+}

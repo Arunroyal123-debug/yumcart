@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YumCart - Delicious Food Delivered</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <h1><i class="fas fa-utensils"></i> YumCart</h1>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#special-deals">Special Deals</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-login">Login</a>
+        <a href="signin.html" class="btn btn-signin">Sign Up</a>
+        <a href="cart.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Delicious Food Delivered to Your Doorstep</h1>
+        <p>Choose from a wide variety of cuisines and enjoy the best flavors in town</p>
+        <a href="#categories" class="btn btn-cta">Explore Menu</a>
+      </div>
+    </section>
+
+    <section class="special-deals" id="special-deals">
+      <div class="section-title">
+        <h2>Today's Special Deals</h2>
+        <p>Limited time offers you can't miss!</p>
+      </div>
+      <div class="deals-container">
+        <div class="deal-card">
+          <div class="discount-badge">20% OFF</div>
+          <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg" alt="Special Pizza Deal">
+          <div class="deal-content">
+            <h3>Deluxe Pizza Combo</h3>
+            <p>Large pizza with 2 sides and drink</p>
+            <div class="price-container">
+              <span class="original-price">$24.99</span>
+              <span class="deal-price">$19.99</span>
+            </div>
+            <button class="btn add-to-cart" data-id="special1" data-name="Deluxe Pizza Combo" data-price="19.99" data-img="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg">Add to Cart</button>
+          </div>
+        </div>
+        <div class="deal-card">
+          <div class="discount-badge">15% OFF</div>
+          <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg" alt="Pancake Breakfast">
+          <div class="deal-content">
+            <h3>Pancake Breakfast</h3>
+            <p>Stack of pancakes with fruits and syrup</p>
+            <div class="price-container">
+              <span class="original-price">$12.99</span>
+              <span class="deal-price">$10.99</span>
+            </div>
+            <button class="btn add-to-cart" data-id="special2" data-name="Pancake Breakfast" data-price="10.99" data-img="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg">Add to Cart</button>
+          </div>
+        </div>
+        <div class="deal-card">
+          <div class="discount-badge">25% OFF</div>
+          <img src="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg" alt="Burger Meal">
+          <div class="deal-content">
+            <h3>Double Burger Meal</h3>
+            <p>Double patty burger with fries and drink</p>
+            <div class="price-container">
+              <span class="original-price">$15.99</span>
+              <span class="deal-price">$11.99</span>
+            </div>
+            <button class="btn add-to-cart" data-id="special3" data-name="Double Burger Meal" data-price="11.99" data-img="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories" id="categories">
+      <div class="section-title">
+        <h2>Food Categories</h2>
+        <p>Explore our wide range of delicious options</p>
+      </div>
+      <div class="categories-container">
+        <a href="category.html?category=vegetarian" class="category-card">
+          <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Vegetarian Food">
+          <div class="category-overlay">
+            <h3>Vegetarian</h3>
+            <p>Fresh and healthy vegetarian delights</p>
+          </div>
+        </a>
+        <a href="category.html?category=non-vegetarian" class="category-card">
+          <img src="https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg" alt="Non-Vegetarian Food">
+          <div class="category-overlay">
+            <h3>Non-Vegetarian</h3>
+            <p>Delicious meat specialties</p>
+          </div>
+        </a>
+        <a href="category.html?category=seafood" class="category-card">
+          <img src="https://images.pexels.com/photos/566345/pexels-photo-566345.jpeg" alt="Seafood">
+          <div class="category-overlay">
+            <h3>Seafood</h3>
+            <p>Fresh from the ocean to your plate</p>
+          </div>
+        </a>
+        <a href="category.html?category=desserts" class="category-card">
+          <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg" alt="Desserts">
+          <div class="category-overlay">
+            <h3>Desserts</h3>
+            <p>Sweet treats to satisfy your cravings</p>
+          </div>
+        </a>
+        <a href="category.html?category=street-food" class="category-card">
+          <img src="https://images.pexels.com/photos/2689419/pexels-photo-2689419.jpeg" alt="Street Food">
+          <div class="category-overlay">
+            <h3>Street Food</h3>
+            <p>Authentic street flavors</p>
+          </div>
+        </a>
+        <a href="category.html?category=drinks" class="category-card">
+          <img src="https://images.pexels.com/photos/2789328/pexels-photo-2789328.jpeg" alt="Drinks">
+          <div class="category-overlay">
+            <h3>Drinks</h3>
+            <p>Refreshing beverages</p>
+          </div>
+        </a>
+        <a href="category.html?category=ice-creams" class="category-card">
+          <img src="https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg" alt="Ice Creams">
+          <div class="category-overlay">
+            <h3>Ice Creams</h3>
+            <p>Cool and creamy delights</p>
+          </div>
+        </a>
+        <a href="category.html?category=fast-food" class="category-card">
+          <img src="https://images.pexels.com/photos/1893557/pexels-photo-1893557.jpeg" alt="Fast Food">
+          <div class="category-overlay">
+            <h3>Fast Food</h3>
+            <p>Quick and tasty options</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="section-title">
+        <h2>What Our Customers Say</h2>
+        <p>Hear from our satisfied customers</p>
+      </div>
+      <div class="testimonials-container">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"The food is always fresh and delicious. Delivery is prompt and the app is super easy to use!"</p>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg" alt="Sarah J.">
+            <h4>Sarah J.</h4>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p>"Amazing variety of restaurants to choose from. I love the special deals section. Saved me a lot!"</p>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="Michael T.">
+            <h4>Michael T.</h4>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"YumCart has the best customer service. Had an issue with my order and they resolved it immediately!"</p>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" alt="Emma L.">
+            <h4>Emma L.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>YumCart</h3>
+        <p>Delicious food delivered to your doorstep. Explore cuisines from around the world without leaving your home.</p>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#special-deals">Special Deals</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Tasty City</li>
+          <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+          <li><i class="fas fa-envelope"></i> info@yumcart.com</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Download Our App</h3>
+        <p>Get the best experience with our mobile app</p>
+        <div class="app-links">
+          <a href="#" class="app-btn">
+            <i class="fab fa-google-play"></i>
+            <span>Google Play</span>
+          </a>
+          <a href="#" class="app-btn">
+            <i class="fab fa-apple"></i>
+            <span>App Store</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 YumCart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

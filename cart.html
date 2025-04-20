@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - YumCart</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <h1><i class="fas fa-utensils"></i> YumCart</h1>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="index.html#special-deals">Special Deals</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-login">Login</a>
+        <a href="signin.html" class="btn btn-signin">Sign Up</a>
+        <a href="cart.html" class="cart-icon active">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cart-section">
+      <div class="section-title">
+        <h2>Your Shopping Cart</h2>
+        <p>Review your items and checkout</p>
+      </div>
+      
+      <div class="cart-container">
+        <div class="cart-items" id="cartItems">
+          <!-- Cart items will be dynamically inserted here -->
+          <div class="empty-cart" id="emptyCart">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Your cart is empty</h3>
+            <p>Looks like you haven't added any items to your cart yet.</p>
+            <a href="index.html" class="btn">Start Shopping</a>
+          </div>
+        </div>
+        
+        <div class="cart-summary">
+          <h3>Order Summary</h3>
+          
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal">$0.00</span>
+          </div>
+          
+          <div class="summary-row">
+            <span>Delivery Fee</span>
+            <span id="deliveryFee">$2.99</span>
+          </div>
+          
+          <div class="summary-row">
+            <span>Tax</span>
+            <span id="tax">$0.00</span>
+          </div>
+          
+          <div class="promo-code">
+            <input type="text" placeholder="Enter promo code">
+            <button class="btn btn-apply">Apply</button>
+          </div>
+          
+          <div class="summary-total">
+            <span>Total</span>
+            <span id="total">$0.00</span>
+          </div>
+          
+          <button id="checkoutBtn" class="btn btn-checkout" disabled>
+            Proceed to Checkout
+          </button>
+          
+          <div class="checkout-options">
+            <p>Or checkout with:</p>
+            <div class="payment-options">
+              <button class="payment-btn">
+                <i class="fab fa-paypal"></i> PayPal
+              </button>
+              <button class="payment-btn">
+                <i class="fab fa-apple-pay"></i> Apple Pay
+              </button>
+              <button class="payment-btn">
+                <i class="fab fa-google-pay"></i> Google Pay
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="continue-shopping">
+        <a href="index.html" class="btn-link">
+          <i class="fas fa-arrow-left"></i> Continue Shopping
+        </a>
+      </div>
+    </section>
+    
+    <section class="recommendations">
+      <div class="section-title">
+        <h2>You May Also Like</h2>
+        <p>Popular items from our menu</p>
+      </div>
+      
+      <div class="recommendations-container">
+        <div class="food-item">
+          <div class="food-item-img">
+            <img src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg" alt="Veggie Wrap">
+          </div>
+          <div class="food-item-content">
+            <div class="food-item-title">
+              <h3>Veggie Wrap</h3>
+              <div class="food-item-rating">
+                <i class="fas fa-star"></i>
+                <span>4.5</span>
+              </div>
+            </div>
+            <p class="food-item-desc">Fresh vegetables wrapped in a whole wheat tortilla.</p>
+            <div class="food-item-actions">
+              <span class="food-item-price">$8.99</span>
+              <button class="btn food-item-btn add-to-cart" data-id="rec1" data-name="Veggie Wrap" data-price="8.99" data-img="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg">Add</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="food-item">
+          <div class="food-badge bestseller">Bestseller</div>
+          <div class="food-item-img">
+            <img src="https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg" alt="Fruit Smoothie">
+          </div>
+          <div class="food-item-content">
+            <div class="food-item-title">
+              <h3>Fruit Smoothie</h3>
+              <div class="food-item-rating">
+                <i class="fas fa-star"></i>
+                <span>4.8</span>
+              </div>
+            </div>
+            <p class="food-item-desc">Blend of fresh fruits and yogurt.</p>
+            <div class="food-item-actions">
+              <span class="food-item-price">$6.49</span>
+              <button class="btn food-item-btn add-to-cart" data-id="rec2" data-name="Fruit Smoothie" data-price="6.49" data-img="https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg">Add</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="food-item">
+          <div class="food-item-img">
+            <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg" alt="Chicken Wings">
+          </div>
+          <div class="food-item-content">
+            <div class="food-item-title">
+              <h3>Chicken Wings</h3>
+              <div class="food-item-rating">
+                <i class="fas fa-star"></i>
+                <span>4.6</span>
+              </div>
+            </div>
+            <p class="food-item-desc">Spicy chicken wings with dipping sauce.</p>
+            <div class="food-item-actions">
+              <span class="food-item-price">$11.99</span>
+              <button class="btn food-item-btn add-to-cart" data-id="rec3" data-name="Chicken Wings" data-price="11.99" data-img="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg">Add</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="food-item">
+          <div class="food-badge new">New</div>
+          <div class="food-item-img">
+            <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg" alt="Chocolate Cake">
+          </div>
+          <div class="food-item-content">
+            <div class="food-item-title">
+              <h3>Chocolate Cake</h3>
+              <div class="food-item-rating">
+                <i class="fas fa-star"></i>
+                <span>4.9</span>
+              </div>
+            </div>
+            <p class="food-item-desc">Rich chocolate cake with fudge frosting.</p>
+            <div class="food-item-actions">
+              <span class="food-item-price">$7.99</span>
+              <button class="btn food-item-btn add-to-cart" data-id="rec4" data-name="Chocolate Cake" data-price="7.99" data-img="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>YumCart</h3>
+        <p>Delicious food delivered to your doorstep. Explore cuisines from around the world without leaving your home.</p>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li><a href="index.html#special-deals">Special Deals</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Tasty City</li>
+          <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+          <li><i class="fas fa-envelope"></i> info@yumcart.com</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Download Our App</h3>
+        <p>Get the best experience with our mobile app</p>
+        <div class="app-links">
+          <a href="#" class="app-btn">
+            <i class="fab fa-google-play"></i>
+            <span>Google Play</span>
+          </a>
+          <a href="#" class="app-btn">
+            <i class="fab fa-apple"></i>
+            <span>App Store</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 YumCart. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Checkout Modal -->
+  <div class="modal-container" id="checkoutModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Checkout</h3>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="checkout-form">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter your full name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="address">Delivery Address</label>
+            <input type="text" id="address" placeholder="Enter your address" required>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" placeholder="City" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="zipCode">Zip Code</label>
+              <input type="text" id="zipCode" placeholder="Zip Code" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+          </div>
+          
+          <h4>Payment Information</h4>
+          
+          <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" required>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="expiryDate">Expiry Date</label>
+              <input type="text" id="expiryDate" placeholder="MM/YY" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" placeholder="XXX" required>
+            </div>
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="savePayment">
+            <label for="savePayment">Save payment information for future orders</label>
+          </div>
+          
+          <button id="placeOrderBtn" class="btn btn-checkout">Place Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Order Confirmation Modal -->
+  <div class="modal-container" id="orderConfirmationModal">
+    <div class="modal confirmation-modal">
+      <div class="order-success">
+        <i class="fas fa-check-circle"></i>
+        <h3>Order Successfully Placed!</h3>
+        <p>Your order has been confirmed and will be delivered soon.</p>
+        <div class="order-details">
+          <div class="order-detail-row">
+            <span>Order Number:</span>
+            <span>#YC24875</span>
+          </div>
+          <div class="order-detail-row">
+            <span>Estimated Delivery:</span>
+            <span>30-45 minutes</span>
+          </div>
+        </div>
+        <button class="btn btn-back-home">Back to Home</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
